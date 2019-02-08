@@ -14,6 +14,7 @@ mongoose.connect(
 );
 
 const db = mongoose.connection;
+const userItems;
 
 const app = express();
 
@@ -30,7 +31,7 @@ db.once("open", function() {
   })
 
   userItems = mongoose.model("items", itemSchema);
-  
+
 })
 
 
@@ -56,4 +57,17 @@ app.listen(PORT, () => {
     console.log(
       `Server listen error, Do you already have a server running on PORT: ${PORT}`
     );
+  });
+
+  app.post("/add-item", async (req, resp) => {
+  
+    const item = await userItems.create(req.body);
+  
+    userItems.push(reminder);
+    await userItems.save();
+  
+    resp.send({
+      success: true,
+      message: "Item added to Mongo Database"
+    });
   });
