@@ -1,14 +1,14 @@
-# React Starter
+# Neighboring-Coding-Challenge
 
-> This repo contains boilerplate code to aid in the creation of a new React app with Redux. Follow the below setup instructions to get started.
+> Coding Challenge for NeighborING company
 
 ### Setup Instructions
 
 > 1. Fork this repo
 > 1. Clone your forked copy of this repo
->    - `git clone https://github.com/[Your Username]/react_starter.git`
+>    - `git clone https://github.com/[Your Username]/Neighboring-Coding-Challenge.git`
 > 1. Change directory into the newly cloned repo
->    - `cd react_starter`
+>    - `cd Neighboring-Coding-Challenge`
 > 1. Install dependencies 
 >    - `npm install`
 > 1. Start dev server
